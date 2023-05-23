@@ -34,5 +34,15 @@
         <footer>
             <p>&copy; Mateus Santos - 2023</p>
         </footer>
+
+        <script>
+            const form = document.forms.entrada;
+            form.addEventListener('submit', envia);
+
+            function envia(evento){
+                evento.preventDefault();
+                console.log('Formulário enviado!');
+            }
+        </script>
 </body>
 </html>
