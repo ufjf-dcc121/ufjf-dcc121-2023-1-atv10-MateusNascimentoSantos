@@ -6,7 +6,7 @@ main{
     display: flex;
  }
 header {
-    background-color: blue;
+    background-color: rgb(108, 131, 195);
     
 }
  header h1 {
