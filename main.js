@@ -1,10 +1,17 @@
-import {adicionar, getItems} from "./store.js";
+import {adicionar, getItems, remover} from "./store.js";
 
 const form = document.forms.entrada;
         form.addEventListener('submit', envia);
+        form.remover.addEventListener('click', remove);
 
 
         atualiza();
+
+        function remove(){
+            console.log('Remove clickando!');
+            remover();
+            atualiza();
+        }
 
         function envia(evento){
             evento.preventDefault();
@@ -16,6 +23,8 @@ const form = document.forms.entrada;
             atualiza();
         }
 
+        
+
         function atualiza(){
             const ol = document.querySelector('ol');
             ol.innerHTML = "";
@@ -24,5 +33,5 @@ const form = document.forms.entrada;
                 li.textContent = getItems()[i];
                 ol.appendChild(li);
         }
-        getItems.push("BOOM!!");
+    
     }
