@@ -3,6 +3,8 @@ const form = document.forms.entrada;
 
         let estado = 0;
 
+        atualiza();
+
         function envia(evento){
             evento.preventDefault();
             console.log('Formulário enviado!');
